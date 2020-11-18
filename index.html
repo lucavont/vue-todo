@@ -37,10 +37,12 @@
                 <button class="btn btn-light " @click='addText'>Aggiungi</button>
             </div>
         </div>
-        <div class="row">
-            <ul class="col d-flex list-group ">
-                <li class="list-group-item d-flex justify-content-between" v-for="input in inputs ">{{input}} <a href="#"><i class="fas fa-times" @click="removeText"></i></a></li>
-            </ul>
+        <div class="container">
+            <div class="row">
+                <ul class="col d-flex list-group ">
+                    <li class="list-group-item d-flex justify-content-between" v-for="(el, index) in userInput">{{el}} <a href="#"><i class="fas fa-times" @click="removeText(index)"></i></a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
