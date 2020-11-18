@@ -8,7 +8,13 @@ const myApp = new Vue({
     },
     methods: {
         addText: function() {
-            this.userInput.push(this.message)
+            if (this.message === "") {
+                alert('Inserisci un messaggio!')
+            } else {
+                this.userInput.push(this.message);
+                this.message = ''
+            }
+
         },
         removeText: function(delIndex) {
             this.userInput.splice(delIndex, 1)
